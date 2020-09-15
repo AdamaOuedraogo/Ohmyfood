@@ -1,0 +1,114 @@
+.container {
+  text-align: center;
+  margin: auto;
+  height: auto;
+}
+
+.container .header {
+  padding: 5px;
+  background-color: #42917d;
+}
+
+.container .header .header__title {
+  color: #ffc44c;
+}
+
+.container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .menu .menu-card {
+  margin: 20px;
+  padding: 150px 10px 150px 10px;
+  width: 30%;
+  height: 50%;
+  border: 2px solid #888888;
+  border-radius: 2%;
+  -webkit-box-shadow: 2px 2px #888888;
+          box-shadow: 2px 2px #888888;
+}
+
+.container .menu .menu-card__link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.container .menu .menu-card__body {
+  text-align: center;
+}
+
+.container .menu .menu-card__body--rosybrown {
+  background-color: rosybrown;
+}
+
+.container .menu .menu-card__img {
+  margin-top: 70px;
+}
+
+.container .menu .menu-card__title {
+  font-size: 16px;
+}
+
+.container .menu .menu-card__subtitle {
+  font-size: large;
+  font-style: italic;
+}
+
+.container .prochainement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .prochainement .prochainement__btn {
+  background-color: #42917d;
+  border: none;
+  border-radius: 5%;
+  color: #ffc44c;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #42917d;
+}
+
+.container .footer a {
+  color: #ffc44c;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+/*# sourceMappingURL=style.css.map */
