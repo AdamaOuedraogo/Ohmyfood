@@ -1,7 +1,7 @@
 $colors: (
   header_footer_btn_bgc: #42917d,
   header_footer_btn_fontcolor: #ffc44c,
-  menu-card--rosybrown: rosybrown,
+  menu-card--rosybrown:#FBDFDB,
 );
 
 @function color($color-name) {
@@ -13,6 +13,18 @@ $desktop: 840px;
   @media (min-width:#{$desktop}) {
     @content;
   }
+}
+
+@mixin hr-widthAndHeigth {
+  width: 100px;
+  height: 0px;
+
+}
+
+@mixin h5-paddingAndMargin {
+  padding: 0px;
+  margin: 0px;
+  
 }
 
 .container {
@@ -37,15 +49,55 @@ $desktop: 840px;
     align-items: center;
     flex-direction: column;
     margin: 0px 100px 0 100px;
-    border-radius: 5%;
+    border-radius: 2%;
 
     &__title {
+
     }
-    &__menu__prelude {
+    &__prelude {
+
+      &--title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       hr {
+        @include hr-widthAndHeigth;
+       }
+       h5{
+        @include h5-paddingAndMargin;
+       }
+      }
     }
-    &__menu__orgue {
+
+    &__orgue {
+
+      &--title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       hr {
+        @include hr-widthAndHeigth;
+       }
+       h5{
+         @include h5-paddingAndMargin;
+       }
+      }
+
+      
     }
-    &__menu__final {
+    &__final {
+
+      &--title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       hr {
+         @include hr-widthAndHeigth;
+       }
+       h5{
+        @include h5-paddingAndMargin;
+       }
+      }
     }
   }
   .prochainement {
