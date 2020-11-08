@@ -1,3 +1,26 @@
+@-webkit-keyframes zoom-opacity {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-opacity {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   text-align: center;
   margin: auto;
@@ -32,9 +55,9 @@
   width: 300px;
   height: 100px;
   border: 2px solid #888888;
-  border-radius: 2%;
-  -webkit-box-shadow: 2px 2px #888888;
-          box-shadow: 2px 2px #888888;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 4px silver;
+          box-shadow: 1px 1px 4px silver;
 }
 
 .container .menu .menu-card__link {
@@ -48,60 +71,141 @@
 }
 
 .container .menu .menu-card__body--rosybrown {
-  background-color: #FBDFDB;
+  background-color: #fbdfdb;
 }
 
 .container .menu .menu-card__body--roseclaire {
-  background-color: #FFF4FE;
+  background-color: #fff4fe;
 }
 
 .container .menu .menu-card__img {
-  width: 200px;
+  font-size: 45px;
 }
 
 .container .menu .menu-card__img--isNotDisplayed {
   display: none;
 }
 
+.container .menu .menu-card__img--orange {
+  background: -webkit-linear-gradient(red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .container .menu .menu-card__title {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .container .menu .menu-card__subtitle {
-  font-size: large;
+  font-size: 15px;
   font-style: italic;
 }
 
-.container .prochainement {
+.container .menu .menu-card:hover {
+  -webkit-animation: zoom-opacity linear;
+          animation: zoom-opacity linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.container .menu .menu-card:hover .menu-card__title {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  font-size: 24px;
+}
+
+.container .menu .menu-card:hover .menu-card__subtitle {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  font-size: 24px;
+}
+
+.container .menu .menu-card:hover .menu-card__img {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  font-size: 65px;
+}
+
+.container .prochainement__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.container .prochainement .prochainement__btn {
+  margin-left: 600px;
   background-color: #42917d;
   border: none;
   border-radius: 5%;
   color: #ffc44c;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 20px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 
-.container .footer {
+.container .prochainement__btn .prochainement__btn-dot {
+  width: 20px;
+  height: 4px;
+  margin: 0 4px;
+  background: #ffc44c;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: loadingFade 1s infinite;
+          animation: loadingFade 1s infinite;
+  padding-bottom: 16px;
+}
+
+.container .prochainement__btn .prochainement__btn-dot:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.container .prochainement__btn .prochainement__btn-dot:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.container .prochainement__btn .prochainement__btn-dot:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -112,7 +216,7 @@
   background-color: #42917d;
 }
 
-.container .footer a {
+.footer a {
   color: #ffc44c;
   font-size: 16px;
   text-decoration: none;
