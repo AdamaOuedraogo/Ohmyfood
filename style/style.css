@@ -54,7 +54,6 @@ body {
   padding: 150px 10px 150px 10px;
   width: 300px;
   height: 100px;
-  border: 2px solid #888888;
   border-radius: 3px;
   -webkit-box-shadow: 1px 1px 4px silver;
           box-shadow: 1px 1px 4px silver;
@@ -70,12 +69,16 @@ body {
   text-align: center;
 }
 
-.container .menu .menu-card__body--rosybrown {
+.container .menu .menu-card__body--rosy {
   background-color: #fbdfdb;
 }
 
-.container .menu .menu-card__body--roseclaire {
+.container .menu .menu-card__body--clair {
   background-color: #fff4fe;
+}
+
+.container .menu .menu-card__body--gris {
+  background-color: #F9F9F9;
 }
 
 .container .menu .menu-card__img {
@@ -96,9 +99,65 @@ body {
   font-size: 17px;
 }
 
+.container .menu .menu-card__title--brown {
+  color: #3D1318;
+}
+
+.container .menu .menu-card__title--orange {
+  color: #C77412;
+}
+
+.container .menu .menu-card__title--bleu {
+  color: #1D87FB;
+}
+
+.container .menu .menu-card__title--vert {
+  color: #73BE56;
+}
+
 .container .menu .menu-card__subtitle {
   font-size: 15px;
   font-style: italic;
+}
+
+.container .menu .menu-card__subtitle--brown {
+  color: #3D1318;
+}
+
+.container .menu .menu-card__subtitle--orangeviolet {
+  background: -webkit-linear-gradient(#C77412, #955EEC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .menu .menu-card__subtitle--bleu {
+  background: -webkit-linear-gradient(#3F46E7, #1A89FB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .menu .menu-card__subtitle--vert {
+  background: -webkit-linear-gradient(#73BE56, #BEFF7F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .menu .menu-card__subtitle:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .menu .menu-card__subtitle:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 .container .menu .menu-card:hover {
@@ -150,13 +209,17 @@ body {
 .container .prochainement__btn .prochainement__btn-dot {
   border-radius: 50%;
   opacity: 0;
-  width: 12px;
-  height: 0px;
-  margin: 0 2px;
+  width: 7px;
+  height: 7px;
+  margin-top: 10px;
+  margin-right: 5px;
   background: #ffc44c;
   -webkit-animation: loadingFade 1s infinite;
           animation: loadingFade 1s infinite;
-  padding-bottom: 16px;
+}
+
+.container .prochainement__btn .first_dot {
+  margin-left: 10px;
 }
 
 .container .prochainement__btn .prochainement__btn-dot:nth-child(1) {
@@ -221,6 +284,9 @@ body {
   margin-right: 12px;
   line-height: 60px;
   font-weight: bold;
+}
+
+.footer__btn:hover {
   -webkit-animation: thing 3s infinite;
           animation: thing 3s infinite;
 }
