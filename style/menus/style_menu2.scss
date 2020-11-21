@@ -1,7 +1,7 @@
 $colors: (
   header_footer_btn_bgc: #42917d,
   header_footer_btn_fontcolor: #ffc44c,
-  menu-card--rosybrown:#FBDFDB,
+  menu-card--clair: #fff4fe,
 );
 
 @function color($color-name) {
@@ -44,7 +44,7 @@ $desktop: 840px;
 
   .menu {
     display: flex;
-    background-color: color(menu-card--rosybrown);
+    background-color: color(menu-card--clair);
     justify-content: center;
     align-items: center;
     flex-direction: column;
