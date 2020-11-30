@@ -85,7 +85,6 @@ body {
   font-size: 45px;
 }
 
-ink
 .container .menu .menu-card__img--isNotDisplayed {
   display: none;
 }
@@ -141,24 +140,6 @@ ink
   background: -webkit-linear-gradient(#73BE56, #BEFF7F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.container .menu .menu-card__subtitle:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  visibility: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.container .menu .menu-card__subtitle:hover:before {
-  visibility: visible;
-  width: 100%;
 }
 
 .container .menu .menu-card:hover {

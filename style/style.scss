@@ -89,7 +89,7 @@ body {
       }
       &__img {
         font-size: 45px;
-ink
+
         &--isNotDisplayed {
           display: none;
         }
@@ -138,23 +138,7 @@ ink
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-        &:before{
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: 
-          0;
-          left: 0;
-          background-color:black;
-          visibility: hidden;
-          transition: all 0.3s ease-in-out;
-        }
-        &:hover:before{
-          visibility: visible;
-          width: 100%;
-  
-        }
+      
       
       }
 

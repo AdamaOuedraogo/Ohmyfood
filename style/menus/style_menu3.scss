@@ -1,134 +1,20 @@
+@import "./style-menu-commun.scss";
+
 $colors: (
   header_footer_btn_bgc: #42917d,
   header_footer_btn_fontcolor: #ffc44c,
-  menu-card--gris: #F9F9F9,
+  menu-card--gris: #f9f9f9,
+  bleu-fort:#3f46e7,
+  bleu-clair:#1a89fb,
 );
 
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-
-$desktop: 840px;
-@mixin desktop {
-  @media (min-width:#{$desktop}) {
-    @content;
-  }
-}
-
-@mixin hr-widthAndHeigth {
-  width: 100px;
-  height: 0px;
-
-}
-
-@mixin h5-paddingAndMargin {
-  padding: 0px;
-  margin: 0px;
-  
-}
-
 .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-//   margin: 5px;
-  height: auto;
-
-  .header {
-    background-color: color(header_footer_btn_bgc);
-    .header__title {
-      color: color(header_footer_btn_fontcolor);
-    }
-  }
-
   .menu {
-    display: flex;
     background-color: color(menu-card--gris);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 100px 0 100px;
-    border-radius: 2%;
 
     &__title {
-
-    }
-    &__prelude {
-
-      &--title{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       hr {
-        @include hr-widthAndHeigth;
-       }
-       h5{
-        @include h5-paddingAndMargin;
-       }
-      }
-    }
-
-    &__orgue {
-
-      &--title{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       hr {
-        @include hr-widthAndHeigth;
-       }
-       h5{
-         @include h5-paddingAndMargin;
-       }
-      }
-
-      
-    }
-    &__final {
-
-      &--title{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       hr {
-         @include hr-widthAndHeigth;
-       }
-       h5{
-        @include h5-paddingAndMargin;
-       }
-      }
-    }
-  }
-  .prochainement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .prochainement__btn {
-      background-color: color(header_footer_btn_bgc);
-      border: none;
-      border-radius: 5%;
-      color: color(header_footer_btn_fontcolor);
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-  }
-  .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: color(header_footer_btn_bgc);
-    a {
-      color: color(header_footer_btn_fontcolor);
-      font-size: 16px;
-      text-decoration: none;
-      margin-left: 12px;
-      margin-right: 12px;
+      @include title-fontSize();
+      @include gradient-title(bleu-fort,bleu-clair);
     }
   }
 }
