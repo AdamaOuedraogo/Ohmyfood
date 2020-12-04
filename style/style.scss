@@ -3,8 +3,8 @@ $colors: (
   header_footer_btn_fontcolor: #ffc44c,
   menu-card--rosy: #fbdfdb,
   menu-card--clair: #fff4fe,
-  menu-card--gris: #F9F9F9,
-  menu-card-gris2: #FCFFFD,
+  menu-card--gris: #f9f9f9,
+  menu-card-gris2: #fcfffd,
   musique-symbole-orange: #f6916a,
 );
 
@@ -51,8 +51,6 @@ body {
     flex-direction: row;
     justify-content: center;
 
-
-
     .menu-card {
       margin: 20px;
       padding: 150px 10px 150px 10px;
@@ -64,21 +62,16 @@ body {
         display: block;
         height: 100%;
         text-decoration: none;
-  
       }
-      
 
-     
       &__body {
         text-align: center;
 
         &--rosy {
           background-color: color(menu-card--rosy);
-    
         }
         &--clair {
           background-color: color(menu-card--clair);
-          
         }
         &--gris {
           background-color: color(menu-card--gris);
@@ -102,18 +95,18 @@ body {
       &__title {
         font-size: 17px;
 
-        &--brown{
-          color: #3D1318;
+        &--brown {
+          color: #3d1318;
         }
 
-        &--orange{
-          color: #C77412;
+        &--orange {
+          color: #c77412;
         }
-        &--bleu{
-          color: #1D87FB;
+        &--bleu {
+          color: #1d87fb;
         }
-        &--vert{
-          color: #73BE56
+        &--vert {
+          color: #73be56;
         }
       }
       &__subtitle {
@@ -121,25 +114,23 @@ body {
         font-style: italic;
 
         &--brown {
-          color: #3D1318;
+          color: #3d1318;
         }
         &--orangeviolet {
-          background: -webkit-linear-gradient(#C77412, #955EEC);
+          background: -webkit-linear-gradient(#c77412, #955eec);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-        &--bleu{
-          background: -webkit-linear-gradient(#3F46E7, #1A89FB);
+        &--bleu {
+          background: -webkit-linear-gradient(#3f46e7, #1a89fb);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-        &--vert{
-          background: -webkit-linear-gradient(#73BE56, #BEFF7F);
+        &--vert {
+          background: -webkit-linear-gradient(#73be56, #beff7f);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-      
-      
       }
 
       &:hover {
@@ -164,17 +155,17 @@ body {
   }
 
   .prochainement__btn {
+    width: 300px;
     display: flex;
     align-items: center;
-    margin-left: 800px;
+    // margin-left: 750px;
+    margin: auto;
     background-color: color(header_footer_btn_bgc);
     border: none;
     border-radius: 5%;
     color: color(header_footer_btn_fontcolor);
-    padding: 15px 32px;
+    padding: 10px 40px;
     text-align: center;
-    // text-decoration: none;
-    // display: inline-block;
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 100px;
@@ -236,9 +227,8 @@ body {
     font-weight: bold;
   }
 
-  &__btn:hover{
+  &__btn:hover {
     animation: thing 3s infinite;
-
   }
 
   &__btn a {
@@ -268,4 +258,28 @@ body {
 
 .fa-music {
   width: 60%;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: auto;
+  }
+  .header {
+    margin: 0 0 40 auto;
+  }
+
+  .menu {
+    width: auto;
+  }
+
+  .container {
+    width: 800px;
+  }
+
+  .prochainement__btn {
+  }
+
+  // .footer {
+  //   position: absolute;
+  // }
 }

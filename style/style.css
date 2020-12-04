@@ -78,7 +78,7 @@ body {
 }
 
 .container .menu .menu-card__body--gris {
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .container .menu .menu-card__img {
@@ -100,19 +100,19 @@ body {
 }
 
 .container .menu .menu-card__title--brown {
-  color: #3D1318;
+  color: #3d1318;
 }
 
 .container .menu .menu-card__title--orange {
-  color: #C77412;
+  color: #c77412;
 }
 
 .container .menu .menu-card__title--bleu {
-  color: #1D87FB;
+  color: #1d87fb;
 }
 
 .container .menu .menu-card__title--vert {
-  color: #73BE56;
+  color: #73be56;
 }
 
 .container .menu .menu-card__subtitle {
@@ -121,23 +121,23 @@ body {
 }
 
 .container .menu .menu-card__subtitle--brown {
-  color: #3D1318;
+  color: #3d1318;
 }
 
 .container .menu .menu-card__subtitle--orangeviolet {
-  background: -webkit-linear-gradient(#C77412, #955EEC);
+  background: -webkit-linear-gradient(#c77412, #955eec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .container .menu .menu-card__subtitle--bleu {
-  background: -webkit-linear-gradient(#3F46E7, #1A89FB);
+  background: -webkit-linear-gradient(#3f46e7, #1a89fb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .container .menu .menu-card__subtitle--vert {
-  background: -webkit-linear-gradient(#73BE56, #BEFF7F);
+  background: -webkit-linear-gradient(#73be56, #beff7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -170,18 +170,19 @@ body {
 }
 
 .container .prochainement__btn {
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 800px;
+  margin: auto;
   background-color: #42917d;
   border: none;
   border-radius: 5%;
   color: #ffc44c;
-  padding: 15px 32px;
+  padding: 10px 40px;
   text-align: center;
   font-size: 20px;
   margin-top: 10px;
@@ -327,5 +328,20 @@ body {
 
 .fa-music {
   width: 60%;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: auto;
+  }
+  .header {
+    margin: 0 0 40 auto;
+  }
+  .menu {
+    width: auto;
+  }
+  .container {
+    width: 800px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

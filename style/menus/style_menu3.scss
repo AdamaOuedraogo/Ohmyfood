@@ -1,12 +1,6 @@
 @import "./style-menu-commun.scss";
 
-$colors: (
-  header_footer_btn_bgc: #42917d,
-  header_footer_btn_fontcolor: #ffc44c,
-  menu-card--gris: #f9f9f9,
-  bleu-fort:#3f46e7,
-  bleu-clair:#1a89fb,
-);
+
 
 .container {
   .menu {
@@ -14,7 +8,10 @@ $colors: (
 
     &__title {
       @include title-fontSize();
-      @include gradient-title(bleu-fort,bleu-clair);
+      font-size: 50px;
+      background: -webkit-linear-gradient(#3f46e7,#1a89fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }

@@ -2,6 +2,10 @@ $colors: (
   header_footer_btn_bgc: #42917d,
   header_footer_btn_fontcolor: #ffc44c,
   menu-card--rosybrown: #fbdfdb,
+  menu-card--clair: #fff4fe,
+  orange-fort: #c77412,
+  violet-fort: #955eec,
+  menu-card-gris2: #fcfffd,
 );
 
 @function color($color-name) {
@@ -20,12 +24,11 @@ $desktop: 840px;
   height: 20px;
 }
 
-@mixin gradient-title($colors,$colors) {
+@mixin gradient-title($colors, $colors) {
   font-size: 50px;
   background: -webkit-linear-gradient($colors, $colors);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 @mixin background-color {
@@ -41,6 +44,10 @@ $desktop: 840px;
   margin: 0px;
 }
 
+body {
+  margin: 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -49,6 +56,7 @@ $desktop: 840px;
   height: auto;
 
   .header {
+    margin-bottom: 50px;
     background-color: color(header_footer_btn_bgc);
     .header__title {
       color: color(header_footer_btn_fontcolor);
@@ -60,8 +68,22 @@ $desktop: 840px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0px 100px 0 100px;
+    // margin: 10px 500px 10px 500px;
+    margin-right: auto;
+    margin-left: auto;
+
     border-radius: 2%;
+    box-shadow: 1px 1px 4px silver;
+    width: 700px;
+    padding-bottom: 100px;
+
+    &__body {
+      p {
+        display: flex;
+        justify-content: space-between;
+        width: 600px;
+      }
+    }
 
     &__title {
     }
@@ -135,6 +157,10 @@ $desktop: 840px;
   }
   .footer {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     flex-direction: row;
     justify-content: space-between;
     background-color: color(header_footer_btn_bgc);
@@ -166,5 +192,26 @@ $desktop: 840px;
   h5:hover:before {
     visibility: visible;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: auto;
+  }
+  .header {
+    margin: 0 0 40 auto;
+  }
+
+  .menu {
+    width: auto;
+  }
+
+  .container {
+    width: 700px;
+  }
+
+  .footer {
+    position: absolute;
   }
 }

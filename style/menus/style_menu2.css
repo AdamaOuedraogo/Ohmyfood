@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,6 +18,7 @@
 }
 
 .container .header {
+  margin-bottom: 50px;
   background-color: #42917d;
 }
 
@@ -25,7 +30,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fbdfdb;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -36,8 +40,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0px 100px 0 100px;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 2%;
+  -webkit-box-shadow: 1px 1px 4px silver;
+          box-shadow: 1px 1px 4px silver;
+  width: 700px;
+  padding-bottom: 100px;
+}
+
+.container .menu__body p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 600px;
 }
 
 .container .menu__img {
@@ -117,24 +136,6 @@
   margin: 0px;
 }
 
-.container .bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.container .bottom .bottom-img {
-  width: 50px;
-  height: 50px;
-}
-
 .container .prochainement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,6 +166,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -205,14 +210,30 @@
   width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    margin: auto;
+  }
+  .header {
+    margin: 0 0 40 auto;
+  }
+  .menu {
+    width: auto;
+  }
+  .container {
+    width: 700px;
+  }
+  .footer {
+    position: absolute;
+  }
+}
+
 .container .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #fff4fe;
 }
 
 .container .menu__title {
+  font-size: 22px;
   font-size: 50px;
   background: -webkit-linear-gradient(#c77412, #955eec);
   -webkit-background-clip: text;

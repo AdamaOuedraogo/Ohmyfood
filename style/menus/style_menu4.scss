@@ -1,20 +1,15 @@
 @import "./style-menu-commun.scss";
 
-$colors: (
-  header_footer_btn_bgc: #42917d,
-  header_footer_btn_fontcolor: #ffc44c,
-  menu-card-gris2: #fcfffd,
-  vert-fort:#73be56,
-  vert-clair:#beff7f,
-);
-
 .container {
   .menu {
     background-color: color(menu-card-gris2);
 
     &__title {
       @include title-fontSize();
-      @include gradient-title(vert-fort,vert-clair);
+      font-size: 50px;
+      background: -webkit-linear-gradient(#73be56,#beff7f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
