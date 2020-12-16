@@ -34,26 +34,36 @@ body {
 
 .container .header .header__title {
   color: #ffc44c;
+  font-size: xx-large;
 }
 
 .container .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 .container .menu .menu-card {
-  margin: 20px;
-  padding: 150px 10px 150px 10px;
-  width: 300px;
-  height: 100px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 30%;
+          flex: 0 30%;
+  width: 100%;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  height: 350px;
+  padding-top: 150px;
+  margin-bottom: 30px;
   border-radius: 3px;
   -webkit-box-shadow: 1px 1px 4px silver;
           box-shadow: 1px 1px 4px silver;
@@ -71,14 +81,17 @@ body {
 
 .container .menu .menu-card__body--rosy {
   background-color: #fbdfdb;
+  font-family: "Nerko One", cursive;
 }
 
 .container .menu .menu-card__body--clair {
   background-color: #fff4fe;
+  font-family: "Libre Baskerville", serif;
 }
 
 .container .menu .menu-card__body--gris {
   background-color: #f9f9f9;
+  font-family: "Libre Baskerville", serif;
 }
 
 .container .menu .menu-card__img {
@@ -93,10 +106,6 @@ body {
   background: -webkit-linear-gradient(red, orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.container .menu .menu-card__title {
-  font-size: 17px;
 }
 
 .container .menu .menu-card__title--brown {
@@ -142,6 +151,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.container .menu .menu-card__subtitle--font {
+  font-size: large;
+}
+
 .container .menu .menu-card:hover {
   -webkit-animation: zoom-opacity linear;
           animation: zoom-opacity linear;
@@ -180,12 +193,10 @@ body {
   margin: auto;
   background-color: #42917d;
   border: none;
-  border-radius: 5%;
   color: #ffc44c;
-  padding: 10px 40px;
-  text-align: center;
-  font-size: 20px;
-  margin-top: 10px;
+  padding: 5px 50px;
+  font-size: x-large;
+  border-radius: 12px;
   margin-bottom: 100px;
 }
 
@@ -263,10 +274,10 @@ body {
 }
 
 .footer__btn {
+  margin-top: 15px;
   margin-left: 12px;
   margin-right: 12px;
-  line-height: 60px;
-  font-weight: bold;
+  font-size: x-large;
 }
 
 .footer__btn:hover {
@@ -276,7 +287,6 @@ body {
 
 .footer__btn a {
   color: #ffc44c;
-  font-size: 18px;
   text-decoration: none;
 }
 
@@ -330,18 +340,31 @@ body {
   width: 60%;
 }
 
-@media screen and (max-width: 500px) {
-  body {
+@media screen and (max-width: 900px) {
+  .header {
     margin: auto;
   }
-  .header {
-    margin: 0 0 40 auto;
-  }
   .menu {
-    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 100px;
+    width: 70%;
+  }
+  .menu-card {
+    width: 40%;
+    margin-left: 0px;
+    padding: auto;
   }
   .container {
-    width: 800px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
